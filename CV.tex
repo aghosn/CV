@@ -1,0 +1,336 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TEX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,oneside]{article}
+%\documentclass[letterpaper,10pt,oneside]{article}
+
+% Do not stop on errors during compilation.
+\nonstopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVTitle}{Adrien Ghosn's CV}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={Adrien Ghosn},
+pdfsubject={CV},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={CV, Adrien Ghosn, Computer Science, Programming, Java, Scala},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\clearpage
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{Adrien Ghosn}
+
+\begin{subtitle}
+\href{https://www.google.com/maps/place/6+Rue+de+la+Saint-Martin,+74160+Saint-Julien-en-Genevois,+France/@46.1462523,6.0852366,17z/data=!3m1!4b1!4m2!3m1!1s0x478c7b8a6860d24b:0xb4b59d1320abf78e}
+{6a rue de la Saint Martin, Apt C01, Saint-Julien en Genevois, Haute-Savoie 74160, FRANCE}
+\par
+\href{mailto:ghosn.adrien@gmail.com}
+{ghosn.adrien@gmail.com}
+\,\BulletSymbol\,
++33\,6\,13\,17\,61\,55
+\,\BulletSymbol\,
+\href{https://github.com/aghosn}
+{github.com/aghosn}
+\,\BulletSymbol\,
+\href{http://ch.linkedin.com/in/aghosn}
+{ch.linkedin.com/in/aghosn}
+\end{subtitle}
+
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+\href{https://www.epfl.ch/}
+{\textbf{Ecole Polytechnique Federale de Lausanne (EPFL)}},
+Lausanne, Switzerland
+\SmallEntryGap
+PhD in Computer Science, \href{http://dcsl.epfl.ch/}{DCSL}
+\hfill
+\DatestampYMD{2016}{09}{01} --
+Present
+
+\SmallEntryGap
+Master Degree in
+\href{http://ic.epfl.ch/computer-science/master}
+{Computer Science Engineering}
+\hfill
+\DatestampYMD{2013}{09}{15} --
+\DatestampYMD{2016}{04}{15}
+\begin{detail}
+\BulletItem
+Specialisation:
+\href{http://ic.epfl.ch/specializations}
+{Foundations of Software}, advised by Prof. M Odersky
+\BulletItem
+Average:
+5.75 / 6.00
+\end{detail}
+
+\SmallEntryGap
+Bachelor Degree in
+\href{http://ic.epfl.ch/computer-science/bachelor}
+{Computer Science Engineering}
+\hfill
+\DatestampYMD{2010}{09}{15} --
+\DatestampYMD{2013}{07}{15}
+
+\EntryGap
+\href{http://www.cmu.edu/}
+{\textbf{Carnegie Mellon University (CMU)}},
+Pittsburgh, Pennsylvania, USA
+\par
+Exchange Year in Bachelor Degree in Computer Science
+\hfill
+\DatestampYMD{2012}{08}{15} --
+\DatestampYMD{2013}{07}{15}
+\begin{detail}
+\BulletItem
+Dean's list, School of Computer Science for QPA > 3.75 / 4.00
+\end{detail}
+
+\hline
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\section
+{Skills}
+{Skills}
+{PDF:Skills}
+
+\textbf{Programming Languages}
+\par
+\begin{skilling}
+Java, 
+Scala,
+C, 
+C++, 
+Shell Scripting,
+Python, 
+asm,
+Haskell,
+Perl,
+JavaScript (\& HTML/CSS),
+SQL
+\end{skilling}
+
+\EntryGap
+\textbf{Tools \& Other skills}
+\par
+\begin{skilling}
+Git, SVN, Eclipse, VIM, SBT, PlayFramework Java/Scala, TOMCAT,
+Relational Databases, OpenStreet Map, Google/Twitter's APIs, Hadoop, Spark, Map/Reduce,
+TCP/IP Networking, IT Security, Cryptography, Model Based System Design, Theoretical Computer Science,
+Concurrent \& Distributed algorithms.
+\end{skilling}
+
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Research Experience}
+{Research Experience}
+{PDF:ResearchExperience}
+
+\href{http://http://www.ccs.neu.edu/research/prl/}
+{\textbf{Northeastern University, Boston}},
+Master Thesis Student
+\hfill
+\DatestampYMD{2015}{09}{15} --
+\DatestampYMD{2016}{03}{15}
+\begin{detail}
+\BulletItem
+Project:
+Efficient runtime deoptimization for R 
+\BulletItem
+Supervisors:
+Prof Jan Vitek and
+Prof Viktor Kuncak
+\BulletItem
+Research areas:
+On-stack replacement, assumption-based compiler optimizations, R, LLVM, JIT compilers
+\end{detail}
+
+\href{http://www.abb.com/}
+{\textbf{ABB Corporate Research}},
+Graduate Research Intern
+\hfill
+\DatestampYMD{2015}{02}{15} --
+\DatestampYMD{2015}{08}{15}
+\begin{detail}
+\BulletItem
+Project:
+Aperiodic Support in FASA
+\BulletItem
+Supervisors:
+Dr. Manuel Oriol and
+Dr. Aurelien Monot
+\BulletItem
+Research areas:
+Fixed-priority servers, data-driven events, real-time control applications, Kernel, dynamic linking/loading, $\pi$-calculus 
+\end{detail}
+
+\EntryGap
+\href{http://lamp.epfl.ch/}
+{\textbf{EPFL Programming Methods Laboratory (LAMP)}},
+Graduate
+\hfill
+\DatestampYMD{2014}{09}{15} --
+\DatestampYMD{2015}{02}{15}
+\begin{detail}
+\BulletItem
+Project:
+\href{http://infoscience.epfl.ch/record/204804?ln=en}
+{Obey, Code health for Scalameta}
+\BulletItem
+Supervisors:
+Prof. M. Odersky and 
+Eugene Burmako
+\BulletItem
+Description:
+Auto-correction and formatting at compile-time of Scala source code, according to user-defined rules.
+The project enables to automatically correct the source code to comply with project-defined formats or adapt to new library interfaces.
+\end{detail}
+
+\EntryGap
+\href{http://lamp.epfl.ch/}
+{\textbf{EPFL Programming Methods Laboratory (LAMP)}},
+Graduate
+\hfill
+\DatestampYMD{2014}{01}{15} --
+\DatestampYMD{2014}{07}{15}
+\begin{detail}
+\BulletItem
+Project:
+\href{http://infoscience.epfl.ch/record/200050?ln=en}
+{AST Persistence for Scalameta}
+\BulletItem
+Supervisors:
+Prof. M. Odersky and 
+Eugene Burmako
+\BulletItem
+Description:
+Efficiently storing a compressed version of Scala Abstract Syntax Trees (AST's).
+This new format resolves compiler version incompatibilities for Scala libraries, while containing more information than the .jar compiled byte-code.
+\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROJECTS & RELEVANT COURSES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{PROJECTS}
+{Projects}
+{PDF:Projects}
+
+\href{https://www.cs.cmu.edu/~410/}
+{\textbf{Operating Systems Implementation \& Design}}, 15-410 CMU
+\hfill
+\DatestampYMD{2013}{01}{15} --
+\DatestampYMD{2013}{07}{15}
+\begin{detail}
+\BulletItem
+Description:
+Implementation of a x86 Unix like Kernel in C and ASM. The project required to design and implement the thread library, the virtual memory, the drivers for the display, keyboard and clock, the system calls and an efficient scheduler.
+\end{detail}
+
+\EntryGap
+\href{http://crossstream.ch/}
+{\textbf{Tweet Aggregator}}, EPFL
+\hfill
+\DatestampYMD{2014}{01}{15} --
+\DatestampYMD{2014}{07}{15}
+\begin{detail}
+\BulletItem
+Description:
+Big Data web application that gathers and displays real-time tweets according to user-defined keywords.
+The application gives a fine-grained filtering of tweets according to zoom-level and selected geographical areas. The project evolved into crossstream.ch.
+\end{detail}
+
+\EntryGap
+\textbf{Compiler \& Advanced Compiler}, EPFL
+\hfill
+\DatestampYMD{2013}{09}{15} --
+\DatestampYMD{2014}{07}{15}
+\begin{detail}
+\BulletItem
+Description:
+Compilers for Java-like and Lisp-like languages. Implementation of optimizations such as DCE-CSE-Constant Folding-Closures-Hoisting and a garbage collector.
+\end{detail}
+
+\hline
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+French (Native language), English (Fluent), Italian (Notions)
+\end{body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+\end{document}
