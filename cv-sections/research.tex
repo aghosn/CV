@@ -13,15 +13,32 @@
 %------------------------------------------------
 \cventry
 {EPFL, DCSL - Prof. Edouard Bugnion}
-{Ongoing Research}
+{Current Research Area}
 {Lausanne, Switzerland}
 {Aug. 2017 - Present}
-{
+{ %TODO bridging gap between hardware features and programming languages
 	\begin{cvitems}
-	\item{Modern system-oriented programming languages, software security, integrity, and confidentiality in Cloud deployments, Intel SGX}
+  \item{Intersection between PL, systems, and Security}
+	\item{Abusing existing programming abstractions to provide efficient support for
+    security hardware extensions}
+  \item{Information flow-control between code modules and in distributed systems}
 	\end{cvitems}
 }
 
+
+\cventry
+{EPFL, DSCL - Prof. Edouard Bugnion, Prof. Jim Larus}
+  {Go \& SGX}
+{Lausanne, Switzerland}
+{Jun.  - Aug. 2018}
+{
+	\begin{cvitems}
+	\item{Extended the goroutine abstraction and Go compiler to transparently
+    support executing goroutines inside Intel SGX.}
+  \item{4x improvement over standard SGX library.}
+	\item{Intel SGX, Confidentiality, Intergrity, Go, Compilers, Code partitioning, Hardware Extensions}
+	\end{cvitems}
+}
 
 \cventry
 {EPFL, DSCL - Prof. Edouard Bugnion}
@@ -30,7 +47,9 @@
 {Sep. 2016 - Jul. 2017}
 {
 	\begin{cvitems}
-	\item{Allow processes to create and switch among different address spaces in a virtualized environment and experimented with loading/copying optimizations yielding a 5x improvement over fork.}
+  \item{Leveraged Dune to allow threads to switch between different views of
+    an address space and take snapshots.\\Allows to protect secrets while executing untrusted library code, or to restore a prestine state after executing an RPC.}
+  \item{5x speed improvement over a linux fork.}
 	\item{Intel VTX, Dune, Virtualization, Kernel module, Virtual Memory Management}
 	\end{cvitems}
 }
@@ -42,7 +61,7 @@
 {Sep. 2015 - Mar. 2016} % Date(s)
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item{Implemented an assumption-based optimizer for an R JIT compiler to remove performance bottlenecks inherent to the language, while preserving semantics at runtime.}
+\item{Assumption-based optimizer for an R JIT compiler to remove performance bottlenecks inherent to the language, while preserving semantics at runtime.}
 \item {On-stack replacement, assumption-based compiler optimizations, runtime deoptimization, R, LLVM, JIT compilers}
 \end{cvitems}
 }
@@ -65,8 +84,10 @@
 {Jan. 2014 - Feb. 2015}
 {
 	\begin{cvitems}
-	\item{Obey: Scala compiler plugin that allows to automatically correct \& reformat scala source code at compile time to enforce user-defined rules, adapt to library API changes, or comply with a different Scala compiler.}
-	\item{AST Persistence: Designed \& implemented a new format to store compressed typed abstract syntax trees along scala binaries to resolve compiler version incompatibilities and code/maccros expansion in IDEs.}
+	\item{Obey: Scala-linter that accepts user-defined rules enforced at compile-time.}
+	\item{AST Persistence: typed-AST based format for Scala code to resolve
+    compiler version incompatibilities and facilitate maccros expansions in
+    IDEs.}
 	\end{cvitems}
 }
 
