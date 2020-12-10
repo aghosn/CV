@@ -21,23 +21,33 @@
   \item{Intersection between PL, systems, and Security}
 	\item{Abusing existing programming abstractions to provide efficient support for
     security hardware extensions}
-  \item{Information flow-control between code modules and in distributed systems}
   \item{Language and hardware-based isolation of mutually distrustful packages in applications}
 	\end{cvitems}
 }
 
+\cventry
+{EPFL, DSCL - Prof. Edouard Bugnion, Prof. James Larus, Prof. Mathias Payer}
+  {Enclosures: Language-based restriction of untrusted libraries (ASPLOS21)}
+{Lausanne, Switzerland}
+{Sep. 2019  - Oct. 2020}
+{
+	\begin{cvitems}
+  \item{New fine-grain programming abstraction to restrict public libraries access to program resources.}
+  \item{Go, Python, Intel VT-x, Intel MPK, Address-space isolation, Sandboxing, LitterBox}
+  \item{\href{https://asplos-conference.org/papers/}{\textbf{asplos link}}}
+	\end{cvitems}
+}
 
 \cventry
 {EPFL, DSCL - Prof. Edouard Bugnion, Prof. James Larus}
-  {Go \& SGX}
+  {\href{https://www.usenix.org/system/files/atc19-ghosn_0.pdf}{Secured Routines: Language-based construction of TEEs (ATC19)}}
 {Lausanne, Switzerland}
 {Jun. 2018  - May 2019}
 {
 	\begin{cvitems}
-	\item{Extended the goroutine abstraction and Go compiler to transparently
-    support executing goroutines inside Intel SGX.}
+  \item{Extended Go programming language to  support executing goroutines inside Intel SGX.}
 	\item{Intel SGX, Confidentiality, Intergrity, Go, Compilers, Code partitioning, Hardware Extensions}
-  \item{\texttt{Secured routines: Language-based construction of TEEs} (ATC19)}
+  \item{\href{https://www.usenix.org/conference/atc19/presentation/ghosn}{\textbf{usenix link}}}
 	\end{cvitems}
 }
 
@@ -87,8 +97,7 @@
 	\begin{cvitems}
 	\item{Obey: Scala-linter that accepts user-defined rules enforced at compile-time.}
 	\item{AST Persistence: typed-AST based format for Scala code to resolve
-    compiler version incompatibilities and facilitate maccros expansions in
-    IDEs.}
+    compiler version incompatibilities and IDE support.}
 	\end{cvitems}
 }
 
