@@ -18,10 +18,11 @@
 {Aug. 2019 - Present}
 { %TODO bridging gap between hardware features and programming languages
 	\begin{cvitems}
-  \item{Intersection between PL, systems, and Security}
+  \item{Intersection between PL, Systems, and Security}
 	\item{Abusing existing programming abstractions to provide efficient support for
     security hardware extensions}
   \item{Language and hardware-based isolation of mutually distrustful packages in applications}
+  \item{Exploring Web-assembly as unit of program isolation}
 	\end{cvitems}
 }
 
@@ -32,8 +33,10 @@
 {Sep. 2019  - Oct. 2020}
 {
 	\begin{cvitems}
-  \item{New fine-grain programming abstraction to restrict public libraries access to program resources.}
-  \item{Go, Python, Intel VT-x, Intel MPK, Address-space isolation, Sandboxing, LitterBox}
+  \item{New fine-grain programming abstraction to restrict public libraries access to program resources}
+  \item{Frontend extensions to Go and Python PLs}
+  \item{Backend support for hardware isolation enforcement (Intel VT-x \& Intel MPK)}
+  \item{Intra-address-space isolation, Sandboxing, Compiler, Linker, Runtime}
   \item{\href{https://asplos-conference.org/papers/}{\textbf{asplos link}}}
 	\end{cvitems}
 }
@@ -58,9 +61,11 @@
 {Sep. 2016 - Jul. 2017}
 {
 	\begin{cvitems}
-  \item{Leveraged Dune to allow threads to switch between different views of
-    an address space and take snapshots.\\Allows to protect secrets while executing untrusted library code, or to restore a pristine state after executing an RPC.}
-  \item{5x speed improvement over a linux fork.}
+  \item{Process virtualization with Dune}
+  \item{Intra-address space isolation, limited view of process memory resources}
+  \item{Protecting application secrets from untrusted libraries}
+  \item{Inter-RPC isolation, process memory snapshots}
+  \item{5x speed improvement over a Linux fork}
 	\item{Intel VTX, Dune, Virtualization, Kernel module, Virtual Memory Management}
 	\end{cvitems}
 }
@@ -72,8 +77,10 @@
 {Sep. 2015 - Mar. 2016} % Date(s)
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item{Assumption-based optimizer for an R JIT compiler to remove performance bottlenecks inherent to the language, while preserving semantics at runtime.}
-\item {On-stack replacement, assumption-based compiler optimizations, runtime deoptimization, R, LLVM, JIT compilers}
+\item{Speculative optimizer for an R JIT compiler}
+\item{Removes performance bottlenecks due to the language semantics}
+\item{Ensures correct run-time behavior.}
+\item {On-stack replacement, speculative optimizations, runtime de-optimization, R, LLVM, JIT compiler}
 \end{cvitems}
 }
 
@@ -84,7 +91,8 @@
 {Feb. 2015 - Aug. 2015}
 {
 	\begin{cvitems}
-	\item{Fixed-priority servers, data-driven events, real-time control applications, kernel design, dynamic linking/loading \& software updates, pi-calculus}
+  \item{Fixed-priority servers, data-driven events, real-time control applications}
+  \item{kernel design, dynamic linking/loading \& software updates, pi-calculus}
 	\end{cvitems}
 }
 
@@ -95,9 +103,9 @@
 {Jan. 2014 - Feb. 2015}
 {
 	\begin{cvitems}
-	\item{Obey: Scala-linter that accepts user-defined rules enforced at compile-time.}
-	\item{AST Persistence: typed-AST based format for Scala code to resolve
-    compiler version incompatibilities and IDE support.}
+	\item{Obey: Scala-linter for user-defined rules enforced at compile-time}
+  \item{AST Persistence: typed-AST format for Scala}
+  \item{Resolves compiler version incompatibilities and provides IDE macros expansion support}
 	\end{cvitems}
 }
 
