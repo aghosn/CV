@@ -12,9 +12,9 @@
 
 \cvskill
 {Focus Areas}
-{Systems, Virtualization, Security, Programming Abstractions\linebreak 
-  Isolation of mutually distrustful software components\linebreak
-  Hardware-enforced isolation\linebreak
+{Systems, Kernels, Virtualization, Security, TEEs, Sandboxes\linebreak 
+ Programming Abstractions, Compilers, Language Runtimes\linebreak
+  Hardware-enforced isolation, Isolation of mutually distrustful software components\linebreak
 }
 
 \end{cvskills}
@@ -32,6 +32,28 @@
   \item{Isolation monitor, hardware-independent support for compartmentalization \& confidential computing.}
   \item{Written in Rust, runs on x86 \& RISC-V}
   \item{Intel VT-x, Intel TXT, RISC-V PMP, Linux Kernel drivers, Virtualization}
+	\end{cvitems}
+}
+
+\cventry
+{EPFL: Charly Castes}
+  {\href{https://dl.acm.org/doi/abs/10.1145/3623759.3624548}{Dynamic Linkers Are the Narrow Waist of Operating Systems [PLOS@SOSP 23]}}
+{Cambridge, UK}
+{Oct. 2023}
+{ 
+	\begin{cvitems}
+  \item{Dynamic linker to port existing software to more secure execution environments.}
+	\end{cvitems}
+}
+
+\cventry
+{EPFL: 	Aleksander Boruch-Gruszecki, Mathias Payer, Clement Pit-Claudel}
+  {\href{https://dl.acm.org/doi/10.1145/3689751}{Gradient: Gradual Compartmentalization via Object Capabilities Tracked in Types [OOSPLA24]}}
+{Cambridge, UK}
+{Oct. 2024}
+{ 
+	\begin{cvitems}
+  \item{Gradual compartmentalization with object capabilities \& hardware-isolated compiled code.}
 	\end{cvitems}
 }
 
@@ -136,8 +158,8 @@
 {
 	\begin{cvitems}
 	\item{Obey: Scala-linter for user-defined rules enforced at compile-time}
-  \item{AST Persistence: typed-AST format for Scala}
-  \item{Resolves compiler version incompatibilities and provides IDE macros expansion support}
+  \item{AST Persistence: typed-AST format for Scala for compiler version compatibility \& macro expansion}
+ % \item{Resolves compiler version incompatibilities and provides IDE macros expansion support}
 	\end{cvitems}
 }
 
@@ -148,8 +170,9 @@
 {Jan. 2013 - Jul. 2013} % Date(s)
 { % Description(s) of experience/contributions/knowledge
 \begin{cvitems}
-\item {Implementation of a x86 Unix like Kernel in C and ASM}
-\item{Design and implementation of thread library, scheduler, virtual memory, various drivers, system calls}
+%\item {Implementation of a x86 Unix like Kernel in C and ASM}
+%\item{Design and implementation of thread library, scheduler, virtual memory, various drivers, system calls}
+\item{Design \& implementation of x86 Unix kernel -- thread library, scheduler, virtual memory, drivers, syscalls}
 \end{cvitems}
 }
 
