@@ -8,6 +8,7 @@
 
 \RequirePackage{fix-cm}
 \RequirePackage{fontspec}
+\RequirePackage{fontawesome5}
 \RequirePackage[a4paper,left=17mm,right=17mm,top=15mm,bottom=17mm,footskip=8mm]{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{enumitem}
@@ -58,6 +59,7 @@
 }
 
 \newcommand{\cvcontactsep}{\quad{\color{line}\textbar}\quad}
+\newcommand{\cvsociallink}[3]{\href{#2}{\mbox{\faIcon{#1}\hspace{4pt}#3}}}
 
 \newcommand{\cvheader}[4]{%
   \gdef\cvname{#1}%
