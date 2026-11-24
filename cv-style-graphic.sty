@@ -61,7 +61,7 @@
 
 \renewcommand{\cventry}[5]{%
   \cvdatedentry{#4}{#3}{%
-    {\fontsize{11}{13}\selectfont\bfseries #1\par}%
+    {\fontsize{11}{13}\selectfont\bfseries\color{accent}#1\par}%
     {\fontsize{9.5}{12}\selectfont\bfseries\color{accent}#2\par}%
     \vspace{2pt}%
     #5%
@@ -72,7 +72,7 @@
   \par\addvspace{10pt}%
   \Needspace{80pt}%
   \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
-  {\fontsize{11}{13}\selectfont\bfseries #1\par}%
+  {\fontsize{11}{13}\selectfont\bfseries\color{accent}#1\par}%
 }
 
 \renewcommand{\cvposition}[4]{%
@@ -90,18 +90,25 @@
   \end{tabularx}\par
 }
 
+\newcommand{\cvlastpublicationyear}{}
+
 \renewcommand{\cvpublication}[5]{%
   \par\addvspace{8pt}%
+  \def\cvcurrentpublicationyear{#1}%
   \begin{minipage}[t]{\cvdatewidth}%
     \vspace{0pt}%
-    {\fontsize{10}{12}\selectfont\bfseries\color{accent}#1\par}%
+    {\fontsize{10}{12}\selectfont\bfseries\color{accent}%
+     \ifx\cvcurrentpublicationyear\cvlastpublicationyear
+       \phantom{#1}%
+     \else #1\fi\par}%
   \end{minipage}%
   \hspace{\cvdategap}%
   \begin{minipage}[t]{\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax}%
     \vspace{0pt}\raggedright
-    {\bfseries\href{#3}{\textcolor{ink}{#4}}\par}%
+    {\mdseries\href{#3}{\textcolor{ink}{#4}}\par}%
     {\fontsize{8.5}{10.5}\selectfont #5\par}%
     \vspace{1pt}%
-    {\fontsize{8}{10}\selectfont\color{accent}#2\par}%
+    {\fontsize{8}{10}\selectfont\bfseries\color{accent}#2\par}%
   \end{minipage}\par
+  \gdef\cvlastpublicationyear{#1}%
 }
