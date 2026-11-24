@@ -1,6 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{cv-style}[2026/11/24 Editorial CV template]
 
+\let\cv@variant\@empty
+\DeclareOption{graphic}{\def\cv@variant{graphic}}
+\DeclareOption{forest}{\def\cv@variant{forest}}
+\ProcessOptions\relax
+
 \RequirePackage{fix-cm}
 \RequirePackage{fontspec}
 \RequirePackage[a4paper,left=17mm,right=17mm,top=15mm,bottom=17mm,footskip=8mm]{geometry}
@@ -87,6 +92,9 @@
   \vspace{8pt}%
 }
 
+\newcommand{\cvdaterange}[2]{#1--\allowbreak#2}
+\newcommand{\cvdateseparator}{ / }
+
 \newcommand{\cventry}[5]{%
   \par\addvspace{10pt}%
   \Needspace{52pt}%
@@ -95,6 +103,14 @@
   \vspace{2pt}%
   #5\par
 }
+
+\newcommand{\cvemployer}[1]{%
+  \par\addvspace{10pt}%
+  \Needspace{80pt}%
+  {\fontsize{11}{13}\selectfont\bfseries #1\par}%
+}
+
+\newcommand{\cvposition}[4]{\cventry{}{#1}{#2}{#3}{#4}}
 
 \newcommand{\cvskill}[2]{%
   \par\addvspace{3pt}%
@@ -123,3 +139,8 @@
   \par\addvspace{8pt}%
   {\fontsize{9}{11}\selectfont\color{muted}#1\par}%
 }
+
+\ifx\cv@variant\@empty
+\else
+  \RequirePackage{cv-style-\cv@variant}
+\fi

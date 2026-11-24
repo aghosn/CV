@@ -1,0 +1,107 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv-style-graphic}[2026/11/24 Graphic date-column variant]
+
+\newlength{\cvdatewidth}
+\setlength{\cvdatewidth}{24mm}
+\newlength{\cvdategap}
+\setlength{\cvdategap}{4mm}
+
+\AtBeginDocument{\fontsize{10}{12.3}\selectfont}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\cvdate}{m}{
+  \tl_set:Nn \l_tmpa_tl {#1}
+  \regex_replace_all:nnN {([A-Za-z]+\.)\s+} {\1\c{nobreakspace}} \l_tmpa_tl
+  \tl_replace_all:Nnn \l_tmpa_tl {--} {--\allowbreak}
+  \tl_use:N \l_tmpa_tl
+}
+\ExplSyntaxOff
+
+\renewcommand{\cvheader}[4]{%
+  \gdef\cvname{#1}%
+  \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
+  \begin{minipage}{\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax}%
+    \raggedright
+    {\fontsize{32}{35}\selectfont\bfseries
+     \leavevmode
+     \llap{{\color{accent}\rule[8pt]{16mm}{3pt}}\hspace{8mm}}#1\par}%
+    \vspace{5pt}%
+    {\fontsize{10}{12.5}\selectfont\color{accent}#2%
+     \hfill{\fontsize{8.5}{11}\selectfont\color{ink}#3}\par}%
+    \vspace{6pt}%
+    {\fontsize{8.5}{11}\selectfont #4\par}%
+  \end{minipage}\par
+  \vspace{9pt}%
+  {\color{line}\hrule height 0.6pt}%
+}
+
+\renewcommand{\cvsection}[1]{%
+  \par\addvspace{14pt}%
+  \Needspace{55pt}%
+  {\fontsize{14}{17}\selectfont\bfseries\color{accent}%
+   \makebox[\dimexpr\cvdatewidth+\cvdategap\relax][l]{\rule[4pt]{16mm}{2.5pt}}%
+   #1\par}%
+  \vspace{7pt}%
+}
+
+\newcommand{\cvdatedentry}[4][6pt]{%
+  \par\addvspace{#1}%
+  \begin{minipage}[t]{\cvdatewidth}%
+    \vspace{0pt}\raggedright
+    {\fontsize{8.5}{10.5}\selectfont\bfseries\color{accent}\cvdate{#2}\par}%
+    \vspace{3pt}%
+    {\fontsize{8}{10}\selectfont\color{ink}#3\par}%
+  \end{minipage}%
+  \hspace{\cvdategap}%
+  \begin{minipage}[t]{\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax}%
+    \vspace{0pt}\raggedright
+    #4\par
+  \end{minipage}\par
+}
+
+\renewcommand{\cventry}[5]{%
+  \cvdatedentry{#4}{#3}{%
+    {\fontsize{11}{13}\selectfont\bfseries #1\par}%
+    {\fontsize{9.5}{12}\selectfont\bfseries #2\par}%
+    \vspace{2pt}%
+    #5%
+  }%
+}
+
+\renewcommand{\cvemployer}[1]{%
+  \par\addvspace{10pt}%
+  \Needspace{80pt}%
+  \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
+  {\fontsize{11}{13}\selectfont\bfseries #1\par}%
+}
+
+\renewcommand{\cvposition}[4]{%
+  \cvdatedentry[2pt]{#3}{#2}{%
+    {\fontsize{9.5}{12}\selectfont\bfseries #1\par}%
+    \vspace{2pt}%
+    #4%
+  }%
+}
+
+\renewcommand{\cvskill}[2]{%
+  \par\addvspace{3pt}%
+  \begin{tabularx}{\textwidth}{@{}p{\cvdatewidth}@{\hspace{\cvdategap}}>{\raggedright\arraybackslash}X@{}}%
+    {\bfseries #1} & #2%
+  \end{tabularx}\par
+}
+
+\renewcommand{\cvpublication}[5]{%
+  \par\addvspace{8pt}%
+  \begin{minipage}[t]{\cvdatewidth}%
+    \vspace{0pt}%
+    {\fontsize{10}{12}\selectfont\bfseries\color{accent}#1\par}%
+  \end{minipage}%
+  \hspace{\cvdategap}%
+  \begin{minipage}[t]{\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax}%
+    \vspace{0pt}\raggedright
+    {\bfseries\href{#3}{\textcolor{ink}{#4}}\par}%
+    {\fontsize{8.5}{10.5}\selectfont #5\par}%
+    \vspace{1pt}%
+    {\fontsize{8}{10}\selectfont\color{accent}#2\par}%
+  \end{minipage}\par
+}

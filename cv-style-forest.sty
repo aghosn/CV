@@ -1,0 +1,69 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv-style-forest}[2026/11/24 Forest header and plain date-column variant]
+
+\RequirePackage{cv-style-graphic}
+\RequirePackage{tikz}
+
+\definecolor{forest}{HTML}{184A36}
+\definecolor{headertext}{HTML}{FFFFFF}
+\definecolor{headersoft}{HTML}{DFECE1}
+\AddToHook{shipout/background}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \ifnum\value{page}=1
+      \fill[forest] (current page.north west)
+        rectangle ([yshift=-44mm]current page.north east);
+    \fi
+  \end{tikzpicture}%
+}
+
+\renewcommand{\cvcontactsep}{\quad{\color{headersoft}\textbullet}\quad}
+
+\renewcommand{\cvheader}[4]{%
+  \gdef\cvname{#1}%
+  \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
+  \raisebox{2mm}[\height][\depth]{%
+  \begin{minipage}{\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax}%
+    \raggedright
+    {\fontsize{32}{35}\selectfont\bfseries\color{headertext}#1\par}%
+    \vspace{5pt}%
+    {\fontsize{10}{12.5}\selectfont\color{headersoft}#2%
+     \hfill{\fontsize{8.5}{11}\selectfont #3}\par}%
+    \vspace{6pt}%
+    {\hypersetup{urlcolor=headertext}\fontsize{8.5}{11}\selectfont
+     \color{headertext}#4\par}%
+  \end{minipage}}\par
+  \vspace{16pt}%
+}
+
+\renewcommand{\cvsummary}[2]{%
+  \par\addvspace{11pt}%
+  \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
+  \begin{minipage}{\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax}%
+    \raggedright
+    {\fontsize{12}{15}\selectfont\bfseries #1\par}%
+    \vspace{4pt}%
+    #2\par
+  \end{minipage}\par
+}
+
+\renewcommand{\cvdaterange}[2]{\mbox{#1\textendash}\par\mbox{#2}}
+\renewcommand{\cvdateseparator}{\par\vspace{2pt}}
+
+\renewcommand{\cvcontinuation}[1]{}
+
+\renewcommand{\footrule}{%
+  \hbox to\headwidth{%
+    \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
+    \color{line}\leaders\hrule height \footrulewidth\hfill
+  }%
+}
+
+\renewcommand{\cvfooter}[2]{%
+  \fancyfoot[L]{}%
+  \fancyfoot[C]{%
+    \hspace*{\dimexpr\cvdatewidth+\cvdategap\relax}%
+    \makebox[\dimexpr\textwidth-\cvdatewidth-\cvdategap\relax][l]{%
+      \fontsize{8}{10}\selectfont #1\hfill #2\hspace{15mm}%
+    }%
+  }%
+}
