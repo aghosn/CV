@@ -1,185 +1,58 @@
-%----------------------------------------------------------------------------------------
-%	SECTION TITLE
-%----------------------------------------------------------------------------------------
+\cvsection{Selected publications}
 
-\cvsection{Research \& Publications}
+\cvpublication
+  {2026}{EuroS\&P / IEEE European Symposium on Security and Privacy}
+  {https://doi.org/10.1109/EuroSP68448.2026.00055}
+  {Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud}
+  {\cvself{Adrien Ghosn}, Charly Castes, Neelu S. Kalani, Yuchen Qian,
+   Marios Kogias, Edouard Bugnion.}
 
-%----------------------------------------------------------------------------------------
-%	SECTION CONTENT
-%----------------------------------------------------------------------------------------
+\cvpublication
+  {2026}{NSDI / USENIX Symposium on Networked Systems Design and Implementation}
+  {https://www.usenix.org/conference/nsdi26/presentation/patel}
+  {KRAKENGUARD: Towards Fine-Grained eBPF Isolation}
+  {Jainil Patel, Lucas Graeff Buhl-Nielsen, \cvself{Adrien Ghosn}, Marios Kogias.}
 
-%\begin{cvskills}
-%\cvskill
-%{Focus Areas}
-%{Systems, Kernels, Virtualization, Security, TEEs, Sandboxes\linebreak 
-% Programming Abstractions, Compilers, Language Runtimes\linebreak
-%  Hardware-enforced isolation, Isolation of mutually distrustful software components\linebreak
-%}
-%
-%\end{cvskills}
+\cvpublication
+  {2026}{ATC / MICA; accepted; preprint: arXiv:2603.03403}
+  {https://arxiv.org/abs/2603.03403}
+  {Sharing is caring: Attestable and Trusted Workflows out of Distrustful Components}
+  {Amir Al Sadi, Sina Abdollahi, \cvself{Adrien Ghosn}, Hamed Haddadi, Marios Kogias.}
 
-\begin{cvskills}
-  \cvskill
-  {Focus Areas}
-  {Exploring isolation abstractions and security guarantees for modern cloud workloads involving multiple distrustful parties.
-Leveraging system design, compiler and language-based techniques, linker/loader instrumentation, and hardware virtualization and security extensions. My work combines confidential computing and compartmentalization while maintaining backward compatibility with existing software. I favor simple, practical, and holistic solutions.}
-\end{cvskills}
+\cvpublication
+  {2025}{HCDS / Workshop on Heterogeneous Composable and Disaggregated Systems}
+  {https://doi.org/10.1145/3723851.3723854}
+  {Enabling Cloud-Scale Distributed Capabilities}
+  {Otto White, Yaoxin Jing, \cvself{Adrien Ghosn}, Michael Steiner,
+   Anjo Vahldiek-Oberwagner, Mona Vij, Llu\'is Vilanova.}
 
-\begin{cventries}
+\cvpublication
+  {2024}{OOPSLA / Proceedings of the ACM on Programming Languages}
+  {https://doi.org/10.1145/3689751}
+  {Gradient: Gradual Compartmentalization via Object Capabilities Tracked in Types}
+  {Aleksander Boruch-Gruszecki, \cvself{Adrien Ghosn}, Mathias Payer, Cl\'ement Pit-Claudel.}
 
-%------------------------------------------------
-\cventry
-{Imperial College London: Marios Kogias, EPFL: Prof. Edouard Bugnion, Prof. Mathias Payer}
-  {\href{https://aghosn.github.io/assets/pdf/tyche_aghosn.pdf}{Tyche: Creating Trust by Abolishing Hierarchies [HotOS 23]}}
-{Cambridge, UK}
-{Nov. 2021 - Present}
-{ %TODO bridging gap between hardware features and programming languages
-	\begin{cvitems}
-  \item{Isolation monitor, hardware-independent support for compartmentalization \& confidential computing.}
-  \item{Written in Rust, runs on x86 \& RISC-V}
-  \item{Intel VT-x, Intel TXT, RISC-V PMP, Linux Kernel drivers, Virtualization}
-	\end{cvitems}
-}
+\cvpublication
+  {2023}{PLOS / Workshop on Programming Languages and Operating Systems}
+  {https://doi.org/10.1145/3623759.3624548}
+  {Dynamic Linkers Are the Narrow Waist of Operating Systems}
+  {Charly Castes, \cvself{Adrien Ghosn}.}
 
-\cventry
-{EPFL: Charly Castes}
-  {\href{https://dl.acm.org/doi/abs/10.1145/3623759.3624548}{Dynamic Linkers Are the Narrow Waist of Operating Systems [PLOS@SOSP 23]}}
-{Cambridge, UK}
-{Oct. 2023}
-{ 
-	\begin{cvitems}
-  \item{Dynamic linker to port existing software to more secure execution environments.}
-	\end{cvitems}
-}
+\cvpublication
+  {2023}{HotOS / Workshop on Hot Topics in Operating Systems}
+  {https://doi.org/10.1145/3593856.3595900}
+  {Creating Trust by Abolishing Hierarchies}
+  {Charly Castes, \cvself{Adrien Ghosn}, Neelu Shivprakash Kalani, Yuchen Qian,
+   Marios Kogias, Mathias Payer, Edouard Bugnion.}
 
-\cventry
-{EPFL: 	Aleksander Boruch-Gruszecki, Mathias Payer, Clement Pit-Claudel}
-  {\href{https://dl.acm.org/doi/10.1145/3689751}{Gradient: Gradual Compartmentalization via Object Capabilities Tracked in Types [OOSPLA24]}}
-{Cambridge, UK}
-{Oct. 2024}
-{ 
-	\begin{cvitems}
-  \item{Gradual compartmentalization with object capabilities \& hardware-isolated compiled code.}
-	\end{cvitems}
-}
+\cvpublication
+  {2021}{ASPLOS / Architectural Support for Programming Languages and Operating Systems}
+  {https://doi.org/10.1145/3445814.3446728}
+  {Enclosure: language-based restriction of untrusted libraries}
+  {\cvself{Adrien Ghosn}, Marios Kogias, Mathias Payer, James R. Larus, Edouard Bugnion.}
 
-
-%\cventry
-%{EPFL, DCSL - Prof. Edouard Bugnion, Prof. James Larus, Prof. Mathias Payer}
-%{Ongoing Research}
-%{Lausanne, Switzerland}
-%{Aug. 2019 - Present}
-%{ %TODO bridging gap between hardware features and programming languages
-%	\begin{cvitems}
-%  \item{Web-assembly as unit of intra-address space isolation}
-%	\end{cvitems}
-%}
-
-\cventry
-{EPFL - Prof. Edouard Bugnion, Prof. James Larus}
-  {\href{https://infoscience.epfl.ch/record/289120}{PhD Thesis: Trust as a Programming Primitive}}
-{Lausanne, Switzerland}
-{Sep. 2016  - Sep. 2021}
-{
-	\begin{cvitems}
-  \item{Programming Language extensions for compartmentalization and confidential computing.}
-  \item{Programming languages, isolation, security, confidentiality, integrity, virtualization, hardware security extensions}
- % \item{\href{https://asplos-conference.org/papers/}{\textbf{ASPLOS link}}}
-	\end{cvitems}
-}
-
-
-\cventry
-{EPFL - Prof. Edouard Bugnion, Prof. Mathias Payer}
-  {\href{https://aghosn.github.io/assets/pdf/enclosure_aghosn.pdf}{Enclosures: Language-based restriction of untrusted libraries [ASPLOS21]}}
-{Lausanne, Switzerland}
-{Sep. 2019  - Oct. 2020}
-{
-	\begin{cvitems}
-  \item{New fine-grain programming abstraction to restrict public libraries access to program resources}
-  \item{Frontend extensions to Go and Python PLs, backend hardware isolation enforcement (Intel VT-x \& Intel MPK)}
-  \item{Intra-address-space isolation, Sandboxing, Compiler, Linker, Runtime}
- % \item{\href{https://asplos-conference.org/papers/}{\textbf{ASPLOS link}}}
-	\end{cvitems}
-}
-
-\cventry
-{EPFL - Prof. Edouard Bugnion, Prof. James Larus}
-  {\href{https://www.usenix.org/system/files/atc19-ghosn_0.pdf}{Secured Routines: Language-based construction of TEEs [ATC19]}}
-{Lausanne, Switzerland}
-{Jun. 2018  - May 2019}
-{
-	\begin{cvitems}
-  \item{Extended Go programming language to  support executing goroutines inside Intel SGX.}
-	\item{Intel SGX, Confidentiality, Intergrity, Go, Compilers, Code partitioning, Hardware Extensions}
-  %\item{\href{https://www.usenix.org/conference/atc19/presentation/ghosn}{\textbf{USENIX link}}}
-	\end{cvitems}
-}
-
-\cventry
-{EPFL - Prof. Edouard Bugnion}
-{Light-Weight Contexts in Dune}
-{Lausanne, Switzerland}
-{Sep. 2016 - Jul. 2017}
-{
-	\begin{cvitems}
-  \item{Process virtualization with Dune}
-  \item{Intra-address space isolation, protecting secrets, memory snapshots, 5x faster than fork}
-%  \item{5x speed improvement over a Linux fork}
-	\item{Intel VTX, Dune, Virtualization, Kernel module, Virtual Memory Management}
-	\end{cvitems}
-}
-
-\cventry
-{Northeastern University - Prof. Jan Vitek} % Organization
-{Efficient Runtime Deoptimization for R(Master Thesis)} % Job title
-{Boston, U.S.A.} % Location
-{Sep. 2015 - Mar. 2016} % Date(s)
-{ % Description(s) of tasks/responsibilities
-\begin{cvitems}
-\item{Speculative optimizer for an R JIT compiler}
-\item{Removes performance bottlenecks due to the language semantics}
-%\item{Ensures correct run-time behavior.}
-\item {On-stack replacement, speculative optimizations, runtime de-optimization, R, LLVM, JIT compiler}
-\end{cvitems}
-}
-
-%\cventry
-%{ABB Corporate Research - Dr. Manuel Oriol}
-%{Aperiodic-Event Support in FASA}
-%{Baden, Switzerland}
-%{Feb. 2015 - Aug. 2015}
-%{
-%	\begin{cvitems}
-%  \item{Fixed-priority servers, data-driven events, real-time control applications}
-%  \item{kernel design, dynamic linking/loading \& software updates, pi-calculus}
-%	\end{cvitems}
-%}
-
-\cventry
-{EPFL, LAMP - Prof. Martin Odersky \& Dr. Eugene Burmako}
-{Scalameta: AST Persistence \& Obey: Code Health}
-{Lausanne, Switzerland}
-{Jan. 2014 - Feb. 2015}
-{
-	\begin{cvitems}
-	\item{Obey: Scala-linter for user-defined rules enforced at compile-time}
-  \item{AST Persistence: typed-AST format for Scala for compiler version compatibility \& macro expansion}
- % \item{Resolves compiler version incompatibilities and provides IDE macros expansion support}
-	\end{cvitems}
-}
-
-\cventry
-{Undergraduate} % Affiliation/role
-{Operating Systems \& Design 15-410} % Organization/group
-{CMU} % Location
-{Jan. 2013 - Jul. 2013} % Date(s)
-{ % Description(s) of experience/contributions/knowledge
-\begin{cvitems}
-%\item {Implementation of a x86 Unix like Kernel in C and ASM}
-%\item{Design and implementation of thread library, scheduler, virtual memory, various drivers, system calls}
-\item{Design \& implementation of x86 Unix kernel -- thread library, scheduler, virtual memory, drivers, syscalls}
-\end{cvitems}
-}
-
-\end{cventries}
+\cvpublication
+  {2019}{USENIX Annual Technical Conference}
+  {https://www.usenix.org/conference/atc19/presentation/ghosn}
+  {Secured Routines: Language-based Construction of Trusted Execution Environments}
+  {\cvself{Adrien Ghosn}, James R. Larus, Edouard Bugnion.}

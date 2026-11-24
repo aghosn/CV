@@ -1,12 +1,13 @@
-.PHONY: CV
-CC = xelatex
-CV_SOURCE = $(shell find . -name '*tex')
+.PHONY: CV clean
 
-CV: resume_cv.tex $(CV_SOURCE)
-	#bibtex resume_cv
-	$(CC) $<
+LATEX = xelatex
+CV_SOURCE = resume_cv.tex cv-style.sty $(wildcard cv-sections/*.tex)
 
-.PHONY: clean
+CV: resume_cv.pdf
+
+resume_cv.pdf: $(CV_SOURCE)
+	$(LATEX) -interaction=nonstopmode -halt-on-error -file-line-error resume_cv.tex
+	$(LATEX) -interaction=nonstopmode -halt-on-error -file-line-error resume_cv.tex
 
 clean:
-	rm -rf *.pdf
+	rm -f resume_cv.pdf resume_cv.aux resume_cv.log resume_cv.out

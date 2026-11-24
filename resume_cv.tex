@@ -1,97 +1,41 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Awesome Resume/CV
-% XeLaTeX Template
-% Version 1.2 (27/3/2017)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Claud D. Park (posquit0.bj@gmail.com) with modifications by 
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template must be compiled with XeLaTeX, the below lines will ensure this
 %!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper]{article}
+\usepackage{cv-style}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv} 
-
-\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
-
-\fontdir[fonts/] % Specify the location of the included fonts
-
-% Color for highlights
-\colorlet{awesome}{awesome-red} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
-%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
-
-% Colors for text - uncomment and modify
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
-
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
-
-%----------------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%----------------------------------------------------------------------------------------
-
-\name{Adrien}{Ghosn}
-%\address{Place du Grand Saint Jean 2, 1003 Lausanne}
-%\mobile{(+33) 6 13 17 61 55}
-
-\email{ghosn.adrien@gmail.com}
-\homepage{aghosn.github.io}
-\github{aghosn}
-\linkedin{aghosn}
-%\skype{skypeid}
-%\stackoverflow{SOid}{SOname}
-%\twitter{@twit}
-%\linkedin{linkedin name}
-%\reddit{reddit account}
-%\xing{xing name}
-%\extrainfo{test} % Other text you want to include on this line
-
-\position{Senior Researcher, Microsoft Azure Research Cambridge UK} % Your expertise/fields
-
-\makecvfooter{\today}{Adrien Ghosn~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
-
-%----------------------------------------------------------------------------------------
+\hypersetup{
+  pdftitle={Adrien Ghosn - Curriculum vitae},
+  pdfauthor={Adrien Ghosn},
+  pdfsubject={Systems, virtualization, and confidential computing}
+}
 
 \begin{document}
 
-\makecvheader % Print the header
+\cvfooter{Adrien Ghosn / Curriculum vitae}{November 2026}
 
-%----------------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%----------------------------------------------------------------------------------------
+\cvheader
+  {Adrien Ghosn}
+  {Senior Researcher / Microsoft Azure Research}
+  {Cambridge, UK}
+  {\href{mailto:ghosn.adrien@gmail.com}{ghosn.adrien@gmail.com}
+   \cvcontactsep \href{https://aghosn.github.io}{aghosn.github.io}
+   \cvcontactsep \href{https://github.com/aghosn}{GitHub}
+   \cvcontactsep \href{https://www.linkedin.com/in/aghosn/}{LinkedIn}}
 
-\input{cv-sections/education.tex}
+\cvsummary
+  {Building secure systems from the right primitives.}
+  {I work on composable isolation and confidential computing for cloud workloads,
+   including AI agents. My goal is to decouple confidentiality from trust in the
+   workloads processing sensitive data, using simple systems primitives,
+   programming abstractions, and hardware-enforced isolation.}
+
 \input{cv-sections/professional.tex}
-\input{cv-sections/skills.tex}
+\input{cv-sections/education.tex}
 
+\newpage
+\cvcontinuation{Research \& community}
 \input{cv-sections/research.tex}
-
-%\newpage % Force a new page for looks
-
-%\input{cv-sections/projects.tex}
+\input{cv-sections/skills.tex}
 \input{cv-sections/teaching.tex}
-\input{cv-sections/personnal.tex}
-%\bibliographystyle{plain}
-%\bibliography{references}
 
-%----------------------------------------------------------------------------------------
-
+\label{cv:lastpage}
 \end{document}
